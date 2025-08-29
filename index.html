@@ -17,7 +17,8 @@
             return total;
         }, 0);
 
-        console.log(donations, totalAmount, totalDonations)
+
+        window.document.querySelector('.total-amounts').innerText =  `totalt indsamlet ${totalAmount} ved ${totalDonations} donationer`;         
     }
 </script>
 
@@ -33,6 +34,7 @@
         background-size: cover;">
     </div>
 </div>
+
 </br>
 <div style="text-align: center;">
     <a target="_blank" style="
@@ -52,6 +54,9 @@
 
 </div>
 </br>
+<div class="total-amounts" > 
+
+</div>
 <div style="text-align: center;">
 <script>
     setDonations();
