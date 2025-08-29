@@ -18,7 +18,7 @@
         }, 0);
 
 
-        window.document.querySelector('.total-amounts').innerText =  `totalt indsamlet ${totalAmount} ved ${totalDonations} donationer`;         
+        window.document.querySelector('.total-amounts').innerText =  `totalt indsamlet ${totalAmount} kr via ${totalDonations} donationer`;         
     }
 </script>
 
@@ -54,12 +54,13 @@
 
 </div>
 </br>
-<div class="total-amounts" > 
+<div class="total-amounts" style="text-align: center; font: bold 11px Arial;" > 
 
 </div>
 <div style="text-align: center;">
 <script>
     setDonations();
+    setInterval(setDonations, 1000*60);
 </script>    
 <iframe src="https://share.garmin.com/CTS2X" width="1200" height="800" />
 </div>
