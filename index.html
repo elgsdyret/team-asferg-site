@@ -7,7 +7,17 @@
     async function setDonations() {
         const response = await fetch("https://donation-scraper.azurewebsites.net/api/scrapedonation?access=at3oHJgEfpbcmGynDytc");
         const donations = await response.json();
-        console.log(donations)
+
+        const totalAmount = donations.reduce((total, current) => { 
+            total += current.donation;
+            return total;
+        }, 0);
+        const totalDonations = donations.reduce((total, current) => { 
+            total += current.numberOfDonations;
+            return total;
+        }, 0);
+
+        console.log(donations, totalAmount, totalDonations)
     }
 </script>
 
